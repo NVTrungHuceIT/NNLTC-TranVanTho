@@ -15,3 +15,5 @@ int main () {
         cout << "Nam " << nam << " khong la nam nhuan" << endl;
     }
 }
+
+//xong

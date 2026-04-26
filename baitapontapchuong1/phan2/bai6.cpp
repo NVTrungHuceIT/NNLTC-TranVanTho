@@ -12,14 +12,22 @@ bool songuyento (int m) {
 }
 
 int main () {
-    int m;
-    cout << "Nhap vao so nguyen duong m: "; cin >> m;
-    if ( m<=100 || m >= 200) {
-        cout << "Nhap lai di m khong hop le. Vui long nhap lai." << endl;
-        return 0;
-    } else if (songuyento(m)) {
-        cout << m << " la so nguyen to." << endl;
-    } else {
-        cout << m << " khong la so nguyen to." << endl;
-    } 
-}    
+    int n;
+
+    while (true) {
+        cout << "Nhap n: ";
+        cin >> n;
+        if (n<=99 || n>200) {
+            cout << "Nhap lai n (100 <= n <= 200): ";
+        } else if (songuyento(n)) {
+            cout << n << " la so nguyen to." << endl;
+            break;
+        }
+        else {
+            cout << n << " khong la so nguyen to." << endl;
+            break;
+        }
+    }
+}  
+
+//xong

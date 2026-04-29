@@ -17,7 +17,7 @@ int main () {
     while (true) {
         cout << "Nhap n: ";
         cin >> n;
-        if (n<=99 || n>200) {
+        if (n<  99 || n>200) {
             cout << "Nhap lai n (100 <= n <= 200): ";
         } else if (songuyento(n)) {
             cout << n << " la so nguyen to." << endl;

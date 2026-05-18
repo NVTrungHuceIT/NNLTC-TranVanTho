@@ -5,22 +5,28 @@ using namespace std;
 
 class HeartRate {
 private:
-    string ten;
+    string hoten;
     int ngay;
     int thang;
     int nam;
 
 public: 
-    HeartRate(int tuoi) {
-        this->ten = "";
+    HeartRate() {
+        this->hoten = "";
         this->ngay = 0;
         this->thang = 0;
         this->nam = 0;
     }
-
-    void getage() {
-        cout << "Nhap ngay thang nam sinh" << endl;
-        cin >> ngay >> thang >> nam;
+    void init (string ten, int ng, int thg, int n) {
+        hoten = ten;
+        ngay = ng;
+        thang = thg;
+        nam = n;
+    }
+ 
+    void getage(int n) {
+        cout <<"Nhap nam hien tai: ";
+        cin >> n;
     }
 
     void getMaximumHeartRate() {

@@ -20,5 +20,4 @@ class Date {
         m = thang;
         y = nam;
     }
-
-}
+};

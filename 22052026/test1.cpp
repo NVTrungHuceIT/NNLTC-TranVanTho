@@ -3,7 +3,6 @@
 #include <string>
 
 using namespace std;
-
 struct contact {
     string ten;
     string diachi;
@@ -39,10 +38,13 @@ int main () {
     for (int i = 0; i<n; i++) {
         if (tencantim == ct[i]->ten) {
             cout << "co ten trong danh ba";
-        } 
-        if (c == false) {
-            cout << "Deo co ten trong danh ba";
+            c = true;
+            break;
         }
+    }
+    
+    if (!c) {
+        cout << "Deo co ten trong danh ba";
     }
 
 }

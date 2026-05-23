@@ -11,6 +11,19 @@ class SinhVien {
         float *dtb;
     
     public:
+    SinhVien() {
+        ht = " ";
+        diem = 0;
+        dtb = 0;
+    }
+    ~SinhVien() {
+        delete[] diem;
+        delete[] dtb;
+    }
+
+    void input (int somon) {
+
+    }
 
 };
 

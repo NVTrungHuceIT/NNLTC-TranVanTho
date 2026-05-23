@@ -9,20 +9,21 @@ struct contact {
     string dtnha;
     string dtdd;
 };
-
 int main () {
-    int n;
     struct contact *ct[100];
+    int n;
     cout << "Nhap so luong danh ba: " ; cin >> n;
-    cin.ignore();
-
     for (int i = 0; i< n ; i++) {
-        ct[i] = new contact;
+        ct[i] = new  struct contact;
         cout <<"Nhap thong tin danh ba thu " << i+1 << endl;
-        cout <<"Nhap ten danh ba: "; getline(cin, ct[i]->ten);
-        cout <<"Nhap dia chi danh ba: "; getline(cin, ct[i]->diachi);
-        cout <<"Nhap so dien thoai nha:  "; getline (cin, ct[i]->dtnha);
-        cout <<"Nhap so dien thoai di dong:  "; getline (cin, ct[i]-> dtdd);
+        cout <<"Nhap ten danh ba: ";
+        cin.ignore(); getline(cin, ct[i]->ten);
+        cout <<"Nhap dia chi danh ba: "; 
+        getline(cin, ct[i]->diachi);
+        cout <<"Nhap so dien thoai nha:  "; 
+        cin >> ct[i]->dtnha;
+        cout <<"Nhap so dien thoai di dong:  "; 
+        cin >> ct[i]-> dtdd;
     }
     cout << "Thong tin trong danh ba: " << endl;
     for (int i = 0; i<n; i++) {
@@ -34,18 +35,17 @@ int main () {
     cout << "Nhap ten can tim: "; 
     cin.ignore(); 
     getline(cin,tencantim);
-
-    for (int i = 0; i<n; i++) {
-        if (tencantim == ct[i]->ten) {
-            cout << "co ten trong danh ba";
+    for (int i = 0; i<n; i++) 
+    {
+        if(tencantim == ct[i]->ten) 
+        {
             c = true;
-            break;
+            cout << "true";
         }
     }
     
-    if (!c) {
-        cout << "Deo co ten trong danh ba";
-    }
+    if (c==false) cout << "false";
+    
 
 }
 
